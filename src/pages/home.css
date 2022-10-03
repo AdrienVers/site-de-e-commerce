@@ -1,0 +1,12 @@
+.HomeGlobal {
+    background-color: rgb(244, 244, 244);
+}
+
+.HomeMessage  {
+    padding : 4vh 0px 5px 0px;
+}
+
+.HomeMessage h1 {
+    font-size : 1.8rem;
+    
+}

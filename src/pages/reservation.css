@@ -1,0 +1,111 @@
+.reservation-construction {
+    width : 100%;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    padding : 5px 0px 5px 0px;
+}
+
+.reservation-construction h3 {
+    width : 70%;
+    line-height: 35px;
+}
+
+.wrap {
+    position: relative;
+    max-width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+}
+.salle {
+    width: auto;
+    max-width: 100%;
+}
+
+.table1,
+.table2,
+.table3,
+.table4,
+.table5,
+.table6,
+.table7,
+.table8,
+.table9,
+.table10 {
+    position: absolute;
+    cursor: pointer;
+}
+
+.table1,
+.table2,
+.table3 {
+    top: 2%;
+    width: 23%;
+}
+
+.table1 {
+    right: 68%;
+    background-color: green;
+}
+
+.table2 {
+    right: 36%;
+    background-color: green;
+}
+
+.table3 {
+    right: 5%;
+    background-color: red;
+}
+
+.table4,
+.table5,
+.table6 {
+    top: 28%;
+    width: 18%;
+}
+
+.table4 {
+    right: 52%;
+    background-color: green;
+}
+
+.table5 {
+    right: 29%;
+    background-color: red;
+}
+
+.table6 {
+    right: 6%;
+    background-color: green;
+}
+
+.table7 {
+    right: 60%;
+    background-color: green;
+}
+
+.table8 {
+    right: 40%;
+    background-color: red;
+}
+
+.table7,
+.table8,
+.table9 {
+    top: 62%;
+    width: 9.2%;
+}
+
+.table9 {
+    right: 26%;
+    background-color: green;
+}
+
+.table10 {
+    top: 62%;
+    width: 18%;
+    right: 5.2%;
+    background-color: red;
+}

@@ -1,0 +1,149 @@
+.backgroundTAI {
+    position: relative;
+    z-index: 0;
+    box-shadow: inset 0px 0px 0px 5px gold;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(215, 215, 215);
+}
+
+.containerTAI {
+    box-shadow: inset 0px 0px 0px 3px red;
+    flex-direction: row;
+    background-color: white;
+    width: 100%;
+    height: 70%;
+}
+
+.headerTAI {
+    height: 2%;
+}
+
+.titleTAI,
+.basketTAI {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 5px 0px 5px;
+    background-color: white;
+}
+
+.titleTAI {
+    box-shadow: inset 0px 0px 0px 0.3px black;
+    top: 90px;
+    height: 35px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.basketTAI {
+    box-shadow: inset 0px 0px 0px 0.3px black;
+    top: 125px;
+    height: 37px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.titleTAI div {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basketTitleTAI {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basketImgContainerTAI {
+    position: relative;
+    display: flex;
+    margin-left: 10px;
+}
+
+.basketImgTAI {
+    height: 30px;
+    width: 30px;
+}
+
+.basketValueTAI {
+    position: absolute;
+    color: white;
+    font-size: 1rem;
+    font-weight: normal;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 2.7px;
+    margin-left : 0.8px;
+}
+
+.filtreTAI {
+    position: sticky;
+    top: 162px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.filtreMenuTAI {
+    background-color: #34911c;
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filtreMenuTAI i {
+    box-shadow: inset 0px 0px 0px 0.3px black;
+    flex-basis: 8%;
+    height: 20.8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.filtreMenuTAI div {
+    box-shadow: inset 0px 0px 0px 0.3px black;
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filtreFoodTAI {
+    background-color : rgb(240, 240, 240);
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.filtreButtonTAI {
+    box-shadow: inset 0px 0px 0px 0.5px black;
+    padding: 2px 8px 2px 8px;
+    background-color: whitesmoke;
+    border-radius: 2px;
+}
+
+.dishesTAI {
+    box-shadow: inset 0px 0px 0px 3px rgb(14, 208, 0);
+    height: 64%;
+}
+
+.footerTAI {
+    box-shadow: inset 0px 0px 0px 3px blue;
+    height: 2%;
+}

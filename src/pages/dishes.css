@@ -1,0 +1,407 @@
+.DishesContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: left;
+    background-color: rgb(244, 244, 244);
+}
+
+.book input {
+    display: none;
+}
+
+.book {
+    margin-top: 10px;
+    display: flex;
+}
+
+ul.dots {
+  max-width: 40em;
+  padding: 0;
+  overflow-x: hidden;
+  list-style: none;
+}
+ul.dots li:before {
+  float: left;
+  width: 0;
+  white-space: nowrap;
+  content: ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . "
+    ". . . . . . . . . . . . . . . . . . . . ";
+}
+ul.dots span:first-child {
+  padding-right: 0.33em;
+  background: white;
+}
+ul.dots span + span {
+  float: right;
+  padding-left: 0.33em;
+  background: white;
+}
+
+.front-border {
+    background-image: url('../assets/menu-fond.png');
+    padding: 30px 30px 30px 30px;
+    height: 100%;
+    box-shadow: inset 0px 0px 0px 2px rgb(78, 62, 41);
+}
+
+.front-background {
+    box-shadow: inset 0px 0px 0px 2px rgb(148, 115, 72);
+    background-color: white;
+    padding: 5px 15px 5px 15px;
+    height: 100%;
+}
+
+#cover {
+    width: 460px;
+    height: 620px;
+    background: white;
+}
+
+.flip-book {
+    width: 460px;
+    height: 620px;
+    position: relative;
+    perspective: 1500px;
+}
+
+.flip {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: 0.5s;
+    color: #000;
+}
+
+.front-background p {
+    font-size: 14px;
+    line-height: 24px;
+    padding-bottom: 20px;
+}
+
+.front-background h5 {
+    line-height: 24px;
+    padding: 10px 0px 20px 0px;
+}
+
+.front-background h4 {
+    padding: 6px 0px 6px 0px;
+}
+
+.front-background h3 {
+    padding: 6px 0px 6px 0px;
+    font-size: 18px;
+}
+
+.front-background h2 {
+    padding: 20px;
+    text-align: center;
+}
+
+.ou {
+    padding: 0px 5px 0px 5px;
+    font-size: 16px;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 0 13px;
+    box-shadow: inset 20px;
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5) 0 2px 5px
+        rgba(0, 0, 0, 0.5);
+}
+
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    background-color: #fff;
+}
+
+.next-btn {
+    position: absolute;
+    bottom: 2.5px;
+    right: 20px;
+    cursor: pointer;
+    color: red;
+    background-color: white;
+    padding: 4px;
+}
+
+.front-container {
+    /* box-shadow: inset 0px 0px 0px 2px blue; */
+    height: 93%;
+}
+
+.front-button-next {
+    /* box-shadow: inset 0px 0px 0px 2px pink; */
+    height: 7%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.front-button-back {
+    /* box-shadow: inset 0px 0px 0px 2px pink; */
+    height: 7%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.next-btn1 {
+    /* position: relative; */
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    font-size: 1.6rem;
+    padding-right: 10px;
+}
+
+.back-btn1 {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    font-size: 1.6rem;
+    padding-left: 10px;
+}
+
+#p1 {
+    z-index: 3;
+}
+#p2 {
+    z-index: 2;
+}
+#p3 {
+    z-index: 1;
+}
+#c1:checked ~ .flip-book #p1 {
+    transform: rotateY(-180deg);
+    z-index: 1;
+}
+#c2:checked ~ .flip-book #p2 {
+    transform: rotateY(-180deg);
+    z-index: 2;
+}
+#c3:checked ~ .flip-book #p3 {
+    transform: rotateY(-180deg);
+    z-index: 3;
+}
+
+/* PARTIE RESPONSIVE POUR TELEPHONE */
+
+.resp-book {
+    display: flex;
+}
+
+.DishesContainer input {
+    display: none;
+}
+
+.resp-front-border {
+    background-image: url('../assets/menu-fond.png');
+    padding: 10px;
+    height: 100%;
+    box-shadow: inset 0px 0px 0px 2px rgb(78, 62, 41);
+}
+
+.resp-front-background {
+    box-shadow: inset 0px 0px 0px 2px rgb(148, 115, 72);
+    background-color: white;
+    padding: 2.5px 10px 2.5px 10px;
+    height: 100%;
+}
+
+.resp-front-container {
+    /* box-shadow: inset 0px 0px 0px 2px blue; */
+    height: 96%;
+}
+
+.resp-front-button-cover,
+.resp-front-button {
+    /* box-shadow: inset 0px 0px 0px 2px pink; */
+    height: 4%;
+    display: flex;
+    justify-content: end;
+}
+
+.resp-front-button {
+    justify-content: space-between;
+}
+
+.resp-flip-book {
+    width: 460px;
+    height: 620px;
+    position: relative;
+    perspective: 1500px;
+}
+
+.resp-flip {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: 0.7s;
+    color: #000;
+}
+
+.resp-front-background p {
+    font-size: 14px;
+    line-height: 24px;
+    padding-bottom: 8px;
+}
+
+.resp-front-background h5 {
+    line-height: 24px;
+    padding: 5px 0px 10px 0px;
+}
+
+.resp-front-background h4 {
+    padding: 6px 0px 6px 0px;
+}
+
+.resp-front-background h3 {
+    padding: 6px 0px 6px 0px;
+    font-size: 18px;
+}
+
+.resp-front-background h2 {
+    padding: 20px;
+    text-align: center;
+}
+
+.resp-ou {
+    padding: 0px 5px 0px 5px;
+    font-size: 16px;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.resp-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 0 13px;
+    box-shadow: inset 20px;
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5) 0 2px 5px
+        rgba(0, 0, 0, 0.5);
+}
+
+.resp-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    background-color: #fff;
+}
+
+.resp-next-btn {
+    position: relative;
+    top: 380px;
+    right: 900px;
+    cursor: pointer;
+    color: #000;
+    background-color: white;
+    padding: 4px;
+}
+
+.resp-next-btn1 {
+    /* box-shadow: inset 0px 0px 0px 2px red; */
+    cursor: pointer;
+    color: #000;
+    background-color: white;
+    font-size: 20px;
+}
+
+.resp-back-btn1 {
+    /* box-shadow: inset 0px 0px 0px 2px dodgerblue; */
+    cursor: pointer;
+    color: #000;
+    background-color: white;
+    font-size: 20px;
+}
+
+.resp-back-btn {
+    position: relative;
+    top: 350px;
+    right: 380px;
+    cursor: pointer;
+    color: #000;
+    background-color: white;
+    padding: 4px;
+}
+
+#resp-p1 {
+    z-index: 5;
+}
+#resp-p2 {
+    z-index: 3;
+}
+#resp-p3 {
+    z-index: 2;
+}
+#resp-p4 {
+    z-index: 1;
+}
+#resp-p5 {
+    z-index: 0;
+}
+#resp-p6 {
+    z-index: -1;
+}
+
+#resp-c1:checked ~ .resp-flip-book #resp-p1 {
+    transform: rotateY(-180deg);
+    z-index: 1;
+}
+#resp-c2:checked ~ .resp-flip-book #resp-p2 {
+    transform: rotateY(-180deg);
+    z-index: 2;
+}
+#resp-c3:checked ~ .resp-flip-book #resp-p3 {
+    transform: rotateY(-180deg);
+    z-index: 3;
+}
+#resp-c4:checked ~ .resp-flip-book #resp-p4 {
+    transform: rotateY(-180deg);
+    z-index: 4;
+}
+#resp-c5:checked ~ .resp-flip-book #resp-p5 {
+    transform: rotateY(-180deg);
+    z-index: 5;
+}
+#resp-c6:checked ~ .resp-flip-book #resp-p6 {
+    transform: rotateY(-180deg);
+    z-index: 6;
+}

@@ -1,0 +1,109 @@
+.EngagementsGlobal {
+    overflow-x: hidden;
+    display : flex;
+    flex-direction: column;
+
+}
+
+.EngagementsContainer {
+    /* box-shadow: inset 0px 0px 0px 2px red; */
+    color: black;
+    display: flex;
+    height: 75vh;
+}
+
+.EngagementsContainer:nth-child(1) {
+    background-color: rgb(244, 244, 244);
+}
+
+.EngagementsContainer:nth-child(2) {
+    background-color: rgb(255, 228, 182);
+}
+
+.EngagementsContainer:nth-child(3) {
+    background-color: rgb(244, 244, 244);
+}
+
+.EngagementsImage {
+    /* box-shadow: inset 0px 0px 0px 1px blue; */
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.EngagementsText {
+    /* box-shadow: inset 0px 0px 0px 1px black; */
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.EngagementsText h2 {
+    font-size: 2rem;
+}
+
+@media (max-width: 900px) {
+    .EngagementsText h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .EngagementsText ul {
+        display: none;
+    }
+
+    .EngagementsContainer {
+        flex-direction: column;
+    }
+
+    .EngagementsImage, .EngagementsText {
+        width : 100%;
+    }
+
+    .EngagementsImage {
+        padding-top : 20px;
+    }
+
+    .EngagementsText h2 {
+        padding-bottom : 10px;
+    }
+
+    .EngagementsContainer {
+        height: 100%;
+    }
+
+    .EngagementsText:nth-child(1) {
+        order:  2;
+    }
+}
+
+.EngagementsText h3 {
+    text-align: left;
+}
+
+.EngagementsText li {
+    text-align: left;
+    padding: 5px 0px 5px 0px;
+    margin-left: 20px;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 20vh;
+    background-image: linear-gradient(70deg, RoyalBlue, DarkTurquoise);
+    box-shadow: 10px 15px 15px 6px #3891b4;
+    border-radius: 15px;
+    font-size: 15vh;
+}
+
+.EngagementsImage img {
+    border-radius: 5px;
+    max-width: 85%;
+    height: 'auto';
+}

@@ -1,0 +1,78 @@
+.dishesInfoContainer {
+    /* overflow-y : scroll; */
+    background-color: white;
+    padding-bottom : 5px;
+}
+
+.dishesInfo {
+    box-shadow: inset 0px 0px 0px 0.2px black;
+    height: 100px;
+    display: flex;
+    width: 97vmin;
+}
+
+.dishesLeftInfo {
+    /* box-shadow: inset 0px 0px 0px 2px rgb(34, 255, 0); */
+    box-shadow: inset 0px 0px 0px 0.2px black;
+    flex-basis: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dishesImageInfo {
+    /* box-shadow: inset 0px 0px 0px 2px dodgerblue; */
+    height: 70px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dishesMiddleInfo {
+    /* box-shadow: inset 0px 0px 0px 2px purple; */
+    box-shadow: inset 0px 0px 0px 0.2px black;
+    flex-basis: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dishesNameInfo,
+.dishesDetailInfo {
+    /* box-shadow: inset 0px 0px 0px 2px rgb(255, 157, 0); */
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dishesPriceInfo {
+    /* box-shadow: inset 0px 0px 0px 2px rgb(255, 0, 191); */
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dishesAddInfo {
+    /* box-shadow: inset 0px 0px 0px 2px rgb(255, 0, 191); */
+    height: 70%;
+    display: flex;
+    flex-direction : column;
+}
+
+.dishesAddNumber, .dishesAddToBasket {
+    /* box-shadow: inset 0px 0px 0px 2px red; */
+    height : 50%;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dishesRightInfo {
+    /* box-shadow: inset 0px 0px 0px 2px turquoise; */
+    box-shadow: inset 0px 0px 0px 0.2px black;
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+}
