@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b663e35b.css",
+    "main.js": "/static/js/main.acd90a7f.js",
+    "static/js/787.dcc73137.chunk.js": "/static/js/787.dcc73137.chunk.js",
+    "static/media/valorisation.png": "/static/media/valorisation.1db277989b58630984fe.png",
+    "static/media/locaux.jpg": "/static/media/locaux.a9d2b2580806c233a334.jpg",
+    "static/media/menu-fond.png": "/static/media/menu-fond.6d2cd396efdf8972f06a.png",
+    "static/media/permaculture.jpg": "/static/media/permaculture.7f9b78843c0f000e9a1c.jpg",
+    "static/media/solaire.jpg": "/static/media/solaire.bfcf8c66b4351ace6fb6.jpg",
+    "static/media/fire.jpg": "/static/media/fire.8d77202c2905c4446f0f.jpg",
+    "static/media/renovation.jpg": "/static/media/renovation.5b3d8fcb67e455003d79.jpg",
+    "static/media/cook.jpg": "/static/media/cook.2161aa4d793b51a3f7f7.jpg",
+    "static/media/actualite.png": "/static/media/actualite.ec10180065a1d96d5e0f.png",
+    "static/media/logo.png": "/static/media/logo.0d5ebf0cd59c9cf335df.png",
+    "static/media/carte.png": "/static/media/carte.6644a4edcce55babbcc7.png",
+    "static/media/buffet.jpg": "/static/media/buffet.dd5eec0a38e803185d5a.jpg",
+    "static/media/grenier.jpg": "/static/media/grenier.3f01ae00430e773f4711.jpg",
+    "static/media/apero.jpg": "/static/media/apero.59ff0804e28a2e23e407.jpg",
+    "static/media/salade-grecque.jpg": "/static/media/salade-grecque.47878a81ad4ef7f2579d.jpg",
+    "static/media/grillad-lax.jpg": "/static/media/grillad-lax.cc1d481e720e01e61ca6.jpg",
+    "static/media/bandeja-paisa.jpg": "/static/media/bandeja-paisa.c567609fc4545a7ab654.jpg",
+    "index.html": "/index.html",
+    "main.b663e35b.css.map": "/static/css/main.b663e35b.css.map",
+    "main.acd90a7f.js.map": "/static/js/main.acd90a7f.js.map",
+    "787.dcc73137.chunk.js.map": "/static/js/787.dcc73137.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b663e35b.css",
+    "static/js/main.acd90a7f.js"
+  ]
+}
