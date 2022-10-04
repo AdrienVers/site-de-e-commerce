@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/site-de-e-commerce/static/css/main.32295026.css",
-    "main.js": "/site-de-e-commerce/static/js/main.ccec0140.js",
+    "main.js": "/site-de-e-commerce/static/js/main.c3d8eab9.js",
     "static/js/787.dcc73137.chunk.js": "/site-de-e-commerce/static/js/787.dcc73137.chunk.js",
     "static/media/valorisation.png": "/site-de-e-commerce/static/media/valorisation.1db277989b58630984fe.png",
     "static/media/locaux.jpg": "/site-de-e-commerce/static/media/locaux.a9d2b2580806c233a334.jpg",
@@ -22,11 +22,11 @@
     "static/media/bandeja-paisa.jpg": "/site-de-e-commerce/static/media/bandeja-paisa.c567609fc4545a7ab654.jpg",
     "index.html": "/site-de-e-commerce/index.html",
     "main.32295026.css.map": "/site-de-e-commerce/static/css/main.32295026.css.map",
-    "main.ccec0140.js.map": "/site-de-e-commerce/static/js/main.ccec0140.js.map",
+    "main.c3d8eab9.js.map": "/site-de-e-commerce/static/js/main.c3d8eab9.js.map",
     "787.dcc73137.chunk.js.map": "/site-de-e-commerce/static/js/787.dcc73137.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.32295026.css",
-    "static/js/main.ccec0140.js"
+    "static/js/main.c3d8eab9.js"
   ]
 }
