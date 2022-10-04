@@ -1,10 +1,10 @@
 import React from 'react';
-import GrilladLax from "../assets/grillad-lax.jpg";
-import BandejaPaisa from "../assets/bandeja-paisa.jpg";
-import SaladeGrecque from "../assets/salade-grecque.jpg";
-import Carte from "../assets/carte.png"
-import "./sample.css";
-
+import GrilladLax from '../assets/grillad-lax.jpg';
+import BandejaPaisa from '../assets/bandeja-paisa.jpg';
+import SaladeGrecque from '../assets/salade-grecque.jpg';
+import Carte from '../assets/carte.png';
+import { Link } from 'react-router-dom';
+import './sample.css';
 
 function Sample() {
     return (
@@ -36,6 +36,7 @@ function Sample() {
                             <div className="SampleImg">
                                 <img src={SaladeGrecque} alt="grenier" />
                             </div>
+
                             <div className="SampleInfo">
                                 <div className="SampleInfoTitle">
                                     <h2>Salade Grecque</h2>
@@ -43,8 +44,11 @@ function Sample() {
                             </div>
                         </div>
                     </div>
+
                     <div className="SampleButton">
-                    <img src={Carte} alt="actualite" />
+                        <Link to={'/dishes/'}>
+                            <img src={Carte} alt="actualite" />
+                        </Link>
                     </div>
                 </div>
             </div>

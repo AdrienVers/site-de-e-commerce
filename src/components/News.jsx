@@ -14,22 +14,22 @@ function News() {
                         <img src={Actualite} alt="actualite" />
                     </div>
                     <div className="NewsEvents">
-                        <div className="NewsEvent">
-                            <div className="NewsImg">
-                                <img src={Buffet} alt="buffet" />
-                            </div>
-                            <div className="NewsInfo">
-                                <div className="NewsInfoTitle">
-                                    <h2>Salon dégustation :</h2>
+                            <div className="NewsEvent">
+                                <div className="NewsImg">
+                                    <img src={Buffet} alt="buffet" />
                                 </div>
-                                <div className="NewsInfoText">
-                                    <h3>
-                                        Toasts rafinés, cocktails originaux et
-                                        plus encore !
-                                    </h3>
+                                <div className="NewsInfo">
+                                    <div className="NewsInfoTitle">
+                                        <h2>Salon dégustation :</h2>
+                                    </div>
+                                    <div className="NewsInfoText">
+                                        <h3>
+                                            Toasts rafinés, cocktails originaux
+                                            et plus encore !
+                                        </h3>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         <div className="NewsEvent">
                             <div className="NewsImg">
                                 <img src={Apero} alt="apero" />
