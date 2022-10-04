@@ -252,7 +252,7 @@ function Header() {
             <HeaderNavbar>
                 <Navbar>
                     <NavbarLogo>
-                        <NavbarLink to={'/'}>
+                        <NavbarLink to={'/site-de-e-commerce/'}>
                             <Logo src={LogoAsset} className="logo" alt="Logo" />
                         </NavbarLink>
                     </NavbarLogo>
