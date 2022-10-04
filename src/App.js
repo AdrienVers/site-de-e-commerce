@@ -28,38 +28,20 @@ function App() {
             <Header />
             <Routes>
                 <Route path="/site-de-e-commerce/" element={<Home />} />
-                <Route path="/site-de-e-commerce/dishes" element={<Dishes />} />
-                <Route
-                    path="/site-de-e-commerce/engagements"
-                    element={<Engagements />}
-                />
-                <Route
-                    path="/site-de-e-commerce/opinions"
-                    element={<Opinions />}
-                />
-                <Route
-                    path="/site-de-e-commerce/contact"
-                    element={<Contact />}
-                />
-                <Route
-                    path="/site-de-e-commerce/reservation"
-                    element={<Reservation />}
-                />
-                <Route
-                    path="/site-de-e-commerce/takeaway"
-                    element={<TakeAwayBasket />}
-                />
+                <Route path="/dishes" element={<Dishes />} />
+                <Route path="/engagements" element={<Engagements />} />
+                <Route path="/opinions" element={<Opinions />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/reservation" element={<Reservation />} />
+                <Route path="/takeaway" element={<TakeAwayBasket />} />
                 {/* <Route
                     path="/takeaway/takeawayinfo"
                     element={<TakeAwayInfo />}
                 /> */}
-                <Route
-                    path="/site-de-e-commerce/account"
-                    element={<Account />}
-                />
-                <Route path="/site-de-e-commerce/private" element={<Private />}>
+                <Route path="/account" element={<Account />} />
+                <Route path="/private" element={<Private />}>
                     <Route
-                        path="/site-de-e-commerce/private/private-home"
+                        path="/private/private-home"
                         element={<PrivateHome />}
                     />
                 </Route>
