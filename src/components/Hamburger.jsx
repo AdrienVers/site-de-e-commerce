@@ -59,7 +59,7 @@ function Hamburger() {
     const isOpen = theme === 'openHamburger';
 
     const toggleAnim = () => {
-        setTheme(isOpen ? 'closeHamburger' : 'openHamburger');
+        setTheme(isOpen ? 'openHamburger' : 'closeHamburger');
     };
 
     return (

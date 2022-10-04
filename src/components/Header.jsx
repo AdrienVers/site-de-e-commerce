@@ -301,23 +301,35 @@ function Header() {
 
                     <NavbarMenu>
                         <NavbarItem>
-                            <NavbarLink to={'/site-de-e-commerce/'}>
+                            <NavbarLink
+                                onClick={toggleAnim}
+                                to={'/site-de-e-commerce/'}
+                            >
                                 Accueil
                             </NavbarLink>
                         </NavbarItem>
                         <NavbarItem>
-                            <NavbarLink to={'/dishes'}>Nos plats</NavbarLink>
+                            <NavbarLink onClick={toggleAnim} to={'/dishes'}>
+                                Nos plats
+                            </NavbarLink>
                         </NavbarItem>
                         <NavbarItem>
-                            <NavbarLink to={'/engagements'}>
+                            <NavbarLink
+                                onClick={toggleAnim}
+                                to={'/engagements'}
+                            >
                                 Nos engagements
                             </NavbarLink>
                         </NavbarItem>
                         <NavbarItem>
-                            <NavbarLink to={'/opinions'}>Vos avis</NavbarLink>
+                            <NavbarLink onClick={toggleAnim} to={'/opinions'}>
+                                Vos avis
+                            </NavbarLink>
                         </NavbarItem>
                         <NavbarItem>
-                            <NavbarLink to={'/contact'}>Contact</NavbarLink>
+                            <NavbarLink onClick={toggleAnim} to={'/contact'}>
+                                Contact
+                            </NavbarLink>
                         </NavbarItem>
                     </NavbarMenu>
                 </Navbar>
