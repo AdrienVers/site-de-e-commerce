@@ -301,7 +301,9 @@ function Header() {
 
                     <NavbarMenu>
                         <NavbarItem>
-                            <NavbarLink to={'/'}>Accueil</NavbarLink>
+                            <NavbarLink to={'/site-de-e-commerce/'}>
+                                Accueil
+                            </NavbarLink>
                         </NavbarItem>
                         <NavbarItem>
                             <NavbarLink to={'/dishes'}>Nos plats</NavbarLink>
