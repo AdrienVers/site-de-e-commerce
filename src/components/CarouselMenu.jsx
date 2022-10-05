@@ -4,11 +4,7 @@ import styled from 'styled-components';
 
 const SliderMenu = styled.div``;
 
-const SliderItem = styled.div`
-
-
-
-`;
+const SliderItem = styled.div``;
 
 const CarouselMenu = (props) => {
     const slides = [

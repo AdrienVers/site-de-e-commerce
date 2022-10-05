@@ -1,6 +1,6 @@
 import React from 'react';
-import './opinionsothers.css';
 import useMediaQuery from './useMediaQuery';
+import './opinionsothers.css';
 
 function OpinionsOthers({ name, image, stars, date, comment }) {
     const phoneSize = useMediaQuery('(max-width: 420px)');
