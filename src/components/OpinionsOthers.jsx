@@ -1,7 +1,10 @@
 import React from 'react';
 import './opinionsothers.css';
+import useMediaQuery from './useMediaQuery';
 
 function OpinionsOthers({ name, image, stars, date, comment }) {
+    const phoneSize = useMediaQuery('(max-width: 420px)');
+
     return (
         <div className="opinions-others-container">
             <div className="opinions-others-profile">
@@ -16,27 +19,10 @@ function OpinionsOthers({ name, image, stars, date, comment }) {
                                 <i
                                     id="opinions-others-star"
                                     className="fa-solid fa-star"
+                                    key={index}
                                 ></i>
                             );
                         })}
-                        {/*  
-                        <i
-                            id="opinions-others-star"
-                            className="fa-solid fa-star"
-                        ></i>
-                        <i
-                            id="opinions-others-star"
-                            className="fa-solid fa-star"
-                        ></i>
-                        <i
-                            id="opinions-others-star"
-                            className="fa-solid fa-star"
-                        ></i>
-                        <i
-                            id="opinions-others-star"
-                            className="fa-solid fa-star"
-                        ></i>
-                        */}
                     </div>
                 </div>
                 <div className="opinions-others-row">
@@ -46,65 +32,20 @@ function OpinionsOthers({ name, image, stars, date, comment }) {
                     <p>{comment}</p>
                 </div>
                 <div className="opinions-others-row">
-                    <button>Ce commentaire vous a été utile ?</button>
-                    <button>Signaler un abus</button>
+                    {phoneSize ? (
+                        <button>Utile ?</button>
+                    ) : (
+                        <button>Ce commentaire vous a été utile ?</button>
+                    )}
+                    {phoneSize ? (
+                        <button>Signaler</button>
+                    ) : (
+                        <button>Signaler un abus</button>
+                    )}
                 </div>
             </div>
         </div>
     );
-
-    /*
-    return (
-        <div className="opinions-others-global">
-            {opinionsData.map((item, index) => {
-                return (
-                    <div key={index} className="opinions-others-container">
-                        <div className="opinions-others-profile">
-                            <img src={Profile} alt="Profil"></img>
-                            <p>{item.name}</p>
-                        </div>
-                        <div className="opinions-others-description">
-                            <div className="opinions-others-row">
-                                <div>
-                                    <i
-                                        id="opinions-others-star"
-                                        className="fa-solid fa-star"
-                                    ></i>
-                                    <i
-                                        id="opinions-others-star"
-                                        className="fa-solid fa-star"
-                                    ></i>
-                                    <i
-                                        id="opinions-others-star"
-                                        className="fa-solid fa-star"
-                                    ></i>
-                                    <i
-                                        id="opinions-others-star"
-                                        className="fa-solid fa-star"
-                                    ></i>
-                                    <i
-                                        id="opinions-others-star"
-                                        className="fa-solid fa-star"
-                                    ></i>
-                                </div>
-                            </div>
-                            <div className="opinions-others-row">
-                                <h3>Visité le {item.date}</h3>
-                            </div>
-                            <div className="opinions-others-row">
-                                <p>{item.comment}</p>
-                            </div>
-                            <div className="opinions-others-row">
-                                <button>Utile ?</button>
-                                <button>Signaler un abus</button>
-                            </div>
-                        </div>
-                    </div>
-                );
-            })}
-        </div>
-    );
-    */
 }
 
 export default OpinionsOthers;

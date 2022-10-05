@@ -16,7 +16,7 @@ function Opinions() {
                 <h2>Écrire un avis</h2>
                 <br />
                 <div>
-                    La note que vous souhaitez attribuer à notre restaurant :{' '}
+                    La note que vous voulez attribuer au restaurant :{' '}
                     <span className="opinion-star-list">
                         {[...Array(5)].map((star, index) => {
                             const ratingValue = index + 1;

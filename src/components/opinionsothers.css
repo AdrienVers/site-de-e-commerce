@@ -26,7 +26,7 @@
 
 .opinions-others-profile p {
     width: 60%;
-    padding-top : 5px;
+    padding-top: 5px;
     /* background-color: aquamarine; */
 }
 
@@ -37,6 +37,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-left: 10px;
 }
 
 #opinions-others-star {
@@ -94,4 +95,21 @@
 .opinions-others-row:nth-child(4) button:nth-child(2):hover {
     color: black;
     cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .opinions-others-container {
+        height: 100%;
+    }
+
+    .opinions-others-profile img {
+        max-width: 70px;
+        max-height: 70px;
+        width: 100%;
+        padding: 5px;
+    }
+
+    .opinions-others-row p {
+        padding: 5px 0px 5px 0px;
+    }
 }
