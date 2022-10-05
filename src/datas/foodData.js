@@ -11,15 +11,15 @@ import tartelette from '../assets/tartelette-i.jpg';
 
 export const foodData = [
     {
-        name : 'Bandeja Paisa',
         id : '1aba',
+        name : 'Bandeja Paisa',
         img : bandejaPaisa,
         category : 'beef',
         price : 11
     },
     {
-        name : 'Fish and Chips',
         id : '1abb',
+        name : 'Fish and Chips',
         img : fishAndChips,
         category : 'fish',
         price : 8

@@ -298,38 +298,71 @@ function Header() {
                             <Hamburger />
                         </div>
                     </NavbarHamburger>
-
                     <NavbarMenu>
                         <NavbarItem>
-                            <NavbarLink
-                                onClick={toggleAnim}
-                                to={'/site-de-e-commerce/'}
-                            >
-                                Accueil
-                            </NavbarLink>
+                            {phoneSize ? (
+                                <NavbarLink to={'/site-de-e-commerce/'}>
+                                    Accueil
+                                </NavbarLink>
+                            ) : (
+                                <NavbarLink
+                                    onClick={toggleAnim}
+                                    to={'/site-de-e-commerce/'}
+                                >
+                                    Accueil
+                                </NavbarLink>
+                            )}
                         </NavbarItem>
                         <NavbarItem>
-                            <NavbarLink onClick={toggleAnim} to={'/dishes'}>
-                                Nos plats
-                            </NavbarLink>
+                            {phoneSize ? (
+                                <NavbarLink to={'/dishes'}>
+                                    Nos plats
+                                </NavbarLink>
+                            ) : (
+                                <NavbarLink onClick={toggleAnim} to={'/dishes'}>
+                                    Nos plats
+                                </NavbarLink>
+                            )}
                         </NavbarItem>
                         <NavbarItem>
-                            <NavbarLink
-                                onClick={toggleAnim}
-                                to={'/engagements'}
-                            >
-                                Nos engagements
-                            </NavbarLink>
+                            {phoneSize ? (
+                                <NavbarLink to={'/engagements'}>
+                                    Nos engagements
+                                </NavbarLink>
+                            ) : (
+                                <NavbarLink
+                                    onClick={toggleAnim}
+                                    to={'/engagements'}
+                                >
+                                    Nos engagements
+                                </NavbarLink>
+                            )}
                         </NavbarItem>
                         <NavbarItem>
-                            <NavbarLink onClick={toggleAnim} to={'/opinions'}>
-                                Vos avis
-                            </NavbarLink>
+                            {phoneSize ? (
+                                <NavbarLink to={'/opinions'}>
+                                    Vos avis
+                                </NavbarLink>
+                            ) : (
+                                <NavbarLink
+                                    onClick={toggleAnim}
+                                    to={'/opinions'}
+                                >
+                                    Vos avis
+                                </NavbarLink>
+                            )}
                         </NavbarItem>
                         <NavbarItem>
-                            <NavbarLink onClick={toggleAnim} to={'/contact'}>
-                                Contact
-                            </NavbarLink>
+                            {phoneSize ? (
+                                <NavbarLink to={'/contact'}>Contact</NavbarLink>
+                            ) : (
+                                <NavbarLink
+                                    onClick={toggleAnim}
+                                    to={'/contact'}
+                                >
+                                    Contact
+                                </NavbarLink>
+                            )}
                         </NavbarItem>
                     </NavbarMenu>
                 </Navbar>

@@ -102,6 +102,21 @@
     }
 }
 
+@media (max-width: 600px) {
+    .slider-global {
+        height: 250px;
+    }
+    .slider-image {
+        max-width: 75%;
+    }
+}
+
+@media (max-width: 500px) {
+    .slider-global {
+        height: 200px;
+    }
+}
+
 @media (max-width: 400px) {
     .slider-global {
         height: 200px;
