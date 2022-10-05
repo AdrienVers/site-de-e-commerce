@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/site-de-e-commerce/static/css/main.32295026.css",
-    "main.js": "/site-de-e-commerce/static/js/main.2a13dc9f.js",
+    "main.css": "/site-de-e-commerce/static/css/main.2394959f.css",
+    "main.js": "/site-de-e-commerce/static/js/main.77101a75.js",
     "static/js/787.dcc73137.chunk.js": "/site-de-e-commerce/static/js/787.dcc73137.chunk.js",
     "static/media/valorisation.png": "/site-de-e-commerce/static/media/valorisation.1db277989b58630984fe.png",
     "static/media/locaux.jpg": "/site-de-e-commerce/static/media/locaux.a9d2b2580806c233a334.jpg",
@@ -9,8 +9,11 @@
     "static/media/permaculture.jpg": "/site-de-e-commerce/static/media/permaculture.7f9b78843c0f000e9a1c.jpg",
     "static/media/solaire.jpg": "/site-de-e-commerce/static/media/solaire.bfcf8c66b4351ace6fb6.jpg",
     "static/media/fire.jpg": "/site-de-e-commerce/static/media/fire.8d77202c2905c4446f0f.jpg",
+    "static/media/julien-b.png": "/site-de-e-commerce/static/media/julien-b.ee31b67b5f180db2cfa3.png",
     "static/media/renovation.jpg": "/site-de-e-commerce/static/media/renovation.5b3d8fcb67e455003d79.jpg",
+    "static/media/john-lilly.png": "/site-de-e-commerce/static/media/john-lilly.5a45a2c2a209186c874f.png",
     "static/media/cook.jpg": "/site-de-e-commerce/static/media/cook.2161aa4d793b51a3f7f7.jpg",
+    "static/media/thea.png": "/site-de-e-commerce/static/media/thea.537b0a35f453c7e0a239.png",
     "static/media/actualite.png": "/site-de-e-commerce/static/media/actualite.ec10180065a1d96d5e0f.png",
     "static/media/logo.png": "/site-de-e-commerce/static/media/logo.0d5ebf0cd59c9cf335df.png",
     "static/media/carte.png": "/site-de-e-commerce/static/media/carte.6644a4edcce55babbcc7.png",
@@ -20,13 +23,14 @@
     "static/media/salade-grecque.jpg": "/site-de-e-commerce/static/media/salade-grecque.47878a81ad4ef7f2579d.jpg",
     "static/media/grillad-lax.jpg": "/site-de-e-commerce/static/media/grillad-lax.cc1d481e720e01e61ca6.jpg",
     "static/media/bandeja-paisa.jpg": "/site-de-e-commerce/static/media/bandeja-paisa.c567609fc4545a7ab654.jpg",
+    "static/media/anonyme.png": "/site-de-e-commerce/static/media/anonyme.668630cdc068d7028c9a.png",
     "index.html": "/site-de-e-commerce/index.html",
-    "main.32295026.css.map": "/site-de-e-commerce/static/css/main.32295026.css.map",
-    "main.2a13dc9f.js.map": "/site-de-e-commerce/static/js/main.2a13dc9f.js.map",
+    "main.2394959f.css.map": "/site-de-e-commerce/static/css/main.2394959f.css.map",
+    "main.77101a75.js.map": "/site-de-e-commerce/static/js/main.77101a75.js.map",
     "787.dcc73137.chunk.js.map": "/site-de-e-commerce/static/js/787.dcc73137.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.32295026.css",
-    "static/js/main.2a13dc9f.js"
+    "static/css/main.2394959f.css",
+    "static/js/main.77101a75.js"
   ]
 }
