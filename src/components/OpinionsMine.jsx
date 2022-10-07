@@ -32,12 +32,10 @@ function OpinionsMine() {
     return (
         <div className="opinion-container">
             <div className="opinion-title">
-                <h2>Avis ({opinionsData.length})</h2>
+                <h2>Avis ({opinionsData.length}) - Écrire un commentaire ?</h2>
             </div>
 
             <form className="opinion-write" onSubmit={handleSubmit}>
-                <h2>Écrire un avis</h2>
-                <br />
                 <div>
                     La note que vous voulez attribuer au restaurant :{' '}
                     <span className="opinion-star-list">

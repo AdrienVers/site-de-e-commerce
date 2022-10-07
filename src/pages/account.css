@@ -18,7 +18,7 @@
 
 .account-connexion,
 .account-inscription {
-    width: 40%;
+    width: 35%;
     display: flex;
     flex-direction: column;
     /* background-color: aqua; */
@@ -61,7 +61,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap : 40px;
+        gap: 40px;
     }
 
     .account-connexion,

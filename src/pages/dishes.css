@@ -17,28 +17,28 @@
 }
 
 ul.dots {
-  max-width: 40em;
-  padding: 0;
-  overflow-x: hidden;
-  list-style: none;
+    max-width: 40em;
+    padding: 0;
+    overflow-x: hidden;
+    list-style: none;
 }
 ul.dots li:before {
-  float: left;
-  width: 0;
-  white-space: nowrap;
-  content: ". . . . . . . . . . . . . . . . . . . . "
-    ". . . . . . . . . . . . . . . . . . . . "
-    ". . . . . . . . . . . . . . . . . . . . "
-    ". . . . . . . . . . . . . . . . . . . . ";
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    content: '. . . . . . . . . . . . . . . . . . . . '
+        '. . . . . . . . . . . . . . . . . . . . '
+        '. . . . . . . . . . . . . . . . . . . . '
+        '. . . . . . . . . . . . . . . . . . . . ';
 }
 ul.dots span:first-child {
-  padding-right: 0.33em;
-  background: white;
+    padding-right: 0.33em;
+    background: white;
 }
 ul.dots span + span {
-  float: right;
-  padding-left: 0.33em;
-  background: white;
+    float: right;
+    padding-left: 0.33em;
+    background: white;
 }
 
 .front-border {
@@ -241,7 +241,7 @@ ul.dots span + span {
     /* box-shadow: inset 0px 0px 0px 2px pink; */
     height: 4%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .resp-front-button {

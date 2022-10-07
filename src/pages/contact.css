@@ -1,0 +1,114 @@
+.contact-global {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    background-color: rgb(240, 240, 240);
+    /* background-color: rgb(234, 190, 48); */
+}
+
+.contact-input,
+.contact-information {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 70px;
+    /* min-height: 600px; */
+}
+
+.contact-input {
+    background-color: antiquewhite;
+}
+
+.contact-information {
+    height: 100%;
+    background-color: rgb(240, 240, 240);
+}
+
+.contact-information ul {
+    text-align: left;
+    list-style: none;
+    padding-left: 25px;
+}
+
+.contact-information li {
+    line-height: 22px;
+}
+
+.contact-global h1 {
+    margin: 30px 0px 30px 0px;
+}
+
+.contact-form,
+.contact-grid {
+    padding: 50px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    box-shadow: 1px 1px 12px #555;
+}
+
+.contact-form {
+    background-color: rgb(240, 240, 240);
+    height: 90%;
+}
+
+.contact-grid {
+    background-color: white;
+    font-size: 1.2rem;
+}
+
+.contact-title {
+    min-height: 100px;
+}
+
+.contact-form div {
+    width: 100%;
+}
+
+.contact-name,
+.contact-email,
+.contact-phone {
+    height: 40px;
+    padding-left: 5px;
+    width: 90%;
+}
+
+.contact-message {
+    height: 80px;
+    padding: 0px 0px 40px 5px;
+    width: 90%;
+}
+
+.contact-file-container {
+    text-align: left;
+    padding-left: 5%;
+}
+
+.contact-submit-button {
+    padding: 5px 10px 5px 10px;
+    font-size: 1.2rem;
+}
+
+.contact-submit-button:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 1050px) {
+    .contact-global {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(240, 240, 240);
+        flex-direction: column;
+    }
+
+    .contact-input,
+    .contact-information {
+        width: 100%;
+    }
+}
