@@ -3,7 +3,7 @@ import GrilladLax from '../assets/grillad-lax.jpg';
 import BandejaPaisa from '../assets/bandeja-paisa.jpg';
 import SaladeGrecque from '../assets/salade-grecque.jpg';
 import Carte from '../assets/carte.png';
-import { Link } from 'react-router-dom';
+import { Link, Router } from 'react-router-dom';
 import './sample.css';
 
 function Sample() {

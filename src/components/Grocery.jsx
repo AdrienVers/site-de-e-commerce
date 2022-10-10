@@ -6,11 +6,17 @@ import styled from 'styled-components';
 const IconPlus = styled.i`
     color: #34911c;
     padding: 0px 10px 0px 10px;
+    &:hover {
+        cursor: pointer;
+    }
 `;
 
 const IconMinus = styled.i`
     color: red;
     padding: 0px 10px 0px 10px;
+    &:hover {
+        cursor: pointer;
+    }
 `;
 
 function Grocery({ cart, updateCart }) {

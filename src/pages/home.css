@@ -1,15 +1,15 @@
-.HomeGlobal {
+.home-global {
     background-color: rgb(244, 244, 244);
 }
 
-.HomeMessage {
+.home-message {
     padding: 4vh 0px 5px 0px;
 }
 
-.HomeMessage h1 {
+.home-message h1 {
     font-size: 1.8rem;
 }
 
-.HomeMessage span {
+.home-message span {
     white-space: nowrap;
 }

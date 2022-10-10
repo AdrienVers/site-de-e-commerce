@@ -73,8 +73,8 @@ const BasketLabel = styled.span`
 `;
 
 function TakeAwayBasket() {
-    const [basketIsOpen, setBasketIsOpen] = useState(true);
-    const [detailsIsOpen, setDetailsIsOpen] = useState(true);
+    const [basketIsOpen, setBasketIsOpen] = useState(false);
+    const [detailsIsOpen, setDetailsIsOpen] = useState(false);
     const [dishesIsOpen, setDishesIsOpen] = useState(true);
 
     const savedCart = localStorage.getItem('cart');
@@ -83,10 +83,7 @@ function TakeAwayBasket() {
         localStorage.setItem('cart', JSON.stringify(cart));
     }, [cart]);
 
-    const total = cart.reduce(
-        (acc, foodType) => acc + foodType.amount,
-        0
-    );
+    const total = cart.reduce((acc, foodType) => acc + foodType.amount, 0);
 
     const openSwitch = (basket, details, dishes) => {
         if (basket === true && details === false && dishes === false) {
@@ -124,12 +121,21 @@ function TakeAwayBasket() {
                 style={{
                     position: 'sticky',
                     top: '90px',
-                    /* backgroundColor: "rgb(250, 235, 215)", */
+                    // backgroundColor: "rgb(250, 235, 215)", //#91ea7af1
+                    backgroundColor: basketIsOpen
+                        ? 'rgb(250, 235, 215)'
+                        : 'white',
                 }}
             >
                 <div>
                     <BasketTitle>
-                        <BasketLabel>Panier</BasketLabel>
+                        <BasketLabel
+                            style={{
+                                fontWeight: basketIsOpen ? 'bold' : 'normal',
+                            }}
+                        >
+                            Panier
+                        </BasketLabel>
                         <div className="basketTitleTAI">
                             <div className="basketImgContainerTAI">
                                 <img
@@ -141,12 +147,14 @@ function TakeAwayBasket() {
                             </div>
                         </div>
                     </BasketTitle>
-                    {/* <SidebarLabel>Total</SidebarLabel>
-                    <SidebarLabel>Plats sélectionnés</SidebarLabel> */}
                 </div>
                 <CaretDisplay>
                     <i className="fa-solid fa-cart-shopping"></i>
-                    <i className="fa-regular fa-bookmark"></i>
+                    {basketIsOpen ? (
+                        <i className="fa-solid fa-bookmark"></i>
+                    ) : (
+                        <i className="fa-regular fa-bookmark"></i>
+                    )}
                 </CaretDisplay>
             </SidebarLink>
             <SidebarLink
@@ -155,16 +163,33 @@ function TakeAwayBasket() {
                     setDetailsIsOpen(true);
                     setDishesIsOpen(false);
                 }}
-                style={{ position: 'sticky', top: '126px' }}
+                style={{
+                    position: 'sticky',
+                    top: '126px',
+                    backgroundColor: detailsIsOpen
+                        ? 'rgb(250, 235, 215)'
+                        : 'white',
+                }}
             >
                 <div>
                     <BasketTitle>
-                        <BasketLabel>Détails de ma commande</BasketLabel>
+                        <BasketLabel
+                            style={{
+                                paddingBottom: '5px',
+                                fontWeight: detailsIsOpen ? 'bold' : 'normal',
+                            }}
+                        >
+                            Détails de ma commande
+                        </BasketLabel>
                     </BasketTitle>
                 </div>
                 <CaretDisplay>
                     <i className="fa-regular fa-circle-question"></i>
-                    <i className="fa-regular fa-bookmark"></i>
+                    {detailsIsOpen ? (
+                        <i className="fa-solid fa-bookmark"></i>
+                    ) : (
+                        <i className="fa-regular fa-bookmark"></i>
+                    )}
                 </CaretDisplay>
             </SidebarLink>
             {/* <div>À venir chercher au Normand Voyageur pour 18h00.</div> */}
@@ -174,16 +199,33 @@ function TakeAwayBasket() {
                     setDetailsIsOpen(false);
                     setDishesIsOpen(true);
                 }}
-                style={{ position: 'sticky', top: '162px' }}
+                style={{
+                    position: 'sticky',
+                    top: '162px',
+                    backgroundColor: dishesIsOpen
+                        ? 'rgb(250, 235, 215)'
+                        : 'white',
+                }}
             >
                 <div>
                     <BasketTitle>
-                        <BasketLabel>Nos plats</BasketLabel>
+                        <BasketLabel
+                            style={{
+                                paddingBottom: '5px',
+                                fontWeight: dishesIsOpen ? 'bold' : 'normal',
+                            }}
+                        >
+                            Nos plats
+                        </BasketLabel>
                     </BasketTitle>
                 </div>
                 <CaretDisplay>
                     <i className="fa-solid fa-utensils"></i>
-                    <i className="fa-solid fa-bookmark"></i>
+                    {dishesIsOpen ? (
+                        <i className="fa-solid fa-bookmark"></i>
+                    ) : (
+                        <i className="fa-regular fa-bookmark"></i>
+                    )}
                 </CaretDisplay>
             </SidebarLink>
             <DropdownLink style={{ zIndex: '-2' }}>
@@ -194,4 +236,3 @@ function TakeAwayBasket() {
 }
 
 export default TakeAwayBasket;
-
