@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/site-de-e-commerce/static/css/main.07d8bd40.css",
-    "main.js": "/site-de-e-commerce/static/js/main.a617d20a.js",
+    "main.css": "/site-de-e-commerce/static/css/main.a41c8adb.css",
+    "main.js": "/site-de-e-commerce/static/js/main.d4f975f4.js",
     "static/js/787.dcc73137.chunk.js": "/site-de-e-commerce/static/js/787.dcc73137.chunk.js",
     "static/media/valorisation.png": "/site-de-e-commerce/static/media/valorisation.1db277989b58630984fe.png",
     "static/media/locaux.jpg": "/site-de-e-commerce/static/media/locaux.a9d2b2580806c233a334.jpg",
@@ -16,21 +16,28 @@
     "static/media/thea.png": "/site-de-e-commerce/static/media/thea.537b0a35f453c7e0a239.png",
     "static/media/actualite.png": "/site-de-e-commerce/static/media/actualite.ec10180065a1d96d5e0f.png",
     "static/media/logo.png": "/site-de-e-commerce/static/media/logo.0d5ebf0cd59c9cf335df.png",
-    "static/media/carte.png": "/site-de-e-commerce/static/media/carte.6644a4edcce55babbcc7.png",
+    "static/media/tartelette.jpg": "/site-de-e-commerce/static/media/tartelette.85beecf0fb757397e505.jpg",
+    "static/media/poulet-coco.jpg": "/site-de-e-commerce/static/media/poulet-coco.cf31f833fea30c3d64e7.jpg",
+    "static/media/paella.jpg": "/site-de-e-commerce/static/media/paella.2f5e3dd2b44fdf1efd8e.jpg",
+    "static/media/poulet-paprika.jpg": "/site-de-e-commerce/static/media/poulet-paprika.09c1b7091489d1f29e94.jpg",
+    "static/media/hamburger.jpg": "/site-de-e-commerce/static/media/hamburger.2b67d216c282ae3a9a76.jpg",
+    "static/media/fish-and-chips.jpg": "/site-de-e-commerce/static/media/fish-and-chips.14703caaad95a6fc9700.jpg",
     "static/media/buffet.jpg": "/site-de-e-commerce/static/media/buffet.dd5eec0a38e803185d5a.jpg",
+    "static/media/menu.png": "/site-de-e-commerce/static/media/menu.c4bfc500c199053548fa.png",
     "static/media/grenier.jpg": "/site-de-e-commerce/static/media/grenier.3f01ae00430e773f4711.jpg",
     "static/media/apero.jpg": "/site-de-e-commerce/static/media/apero.59ff0804e28a2e23e407.jpg",
+    "static/media/moules-frites.jpg": "/site-de-e-commerce/static/media/moules-frites.fc459b4f9b970fa2ad5d.jpg",
     "static/media/salade-grecque.jpg": "/site-de-e-commerce/static/media/salade-grecque.47878a81ad4ef7f2579d.jpg",
     "static/media/grillad-lax.jpg": "/site-de-e-commerce/static/media/grillad-lax.cc1d481e720e01e61ca6.jpg",
     "static/media/bandeja-paisa.jpg": "/site-de-e-commerce/static/media/bandeja-paisa.c567609fc4545a7ab654.jpg",
     "static/media/anonyme.png": "/site-de-e-commerce/static/media/anonyme.668630cdc068d7028c9a.png",
     "index.html": "/site-de-e-commerce/index.html",
-    "main.07d8bd40.css.map": "/site-de-e-commerce/static/css/main.07d8bd40.css.map",
-    "main.a617d20a.js.map": "/site-de-e-commerce/static/js/main.a617d20a.js.map",
+    "main.a41c8adb.css.map": "/site-de-e-commerce/static/css/main.a41c8adb.css.map",
+    "main.d4f975f4.js.map": "/site-de-e-commerce/static/js/main.d4f975f4.js.map",
     "787.dcc73137.chunk.js.map": "/site-de-e-commerce/static/js/787.dcc73137.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.07d8bd40.css",
-    "static/js/main.a617d20a.js"
+    "static/css/main.a41c8adb.css",
+    "static/js/main.d4f975f4.js"
   ]
 }
