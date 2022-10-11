@@ -1,6 +1,34 @@
 import React from 'react';
-import './reservation.css';
 import Recipe from '../components/Recipe';
+import styled from 'styled-components';
+
+const ReservationSeparation = styled.section`
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 0.8rem,
+        #ebebeb 0.8rem,
+        #ebebeb 1.6rem
+    );
+    height: 2.4rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%;
+`;
+
+const ReservationConstruction = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    padding: 5px 0px 5px 0px;
+
+    h3 {
+        width: 70%;
+        line-height: 35px;
+    }
+`;
 
 function Reservation() {
     function todayDate() {
@@ -18,7 +46,7 @@ function Reservation() {
     return (
         <div>
             <br />
-            <div className="reservation-construction">
+            <ReservationConstruction>
                 <h3>
                     En raison de travaux prévus dans la salle de restaurant du{' '}
                     {todayDate()} au {weekDate()}, nous ne pourrons pas prendre
@@ -37,9 +65,9 @@ function Reservation() {
                     ></i>{' '}
                     !
                 </h3>
-            </div>
-            <section className="footer-separation"></section>
-            <div className="reservation-meanwhile">
+            </ReservationConstruction>
+            <ReservationSeparation></ReservationSeparation>
+            <div>
                 <Recipe />
             </div>
         </div>

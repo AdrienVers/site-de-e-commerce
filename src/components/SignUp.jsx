@@ -3,7 +3,45 @@ import React, { useEffect } from 'react';
 import { useContext, useRef, useState } from 'react';
 import { UserContext } from '../context/userContext';
 import { useNavigate } from 'react-router-dom';
-import './signUpIn.css';
+import styled from 'styled-components';
+
+const SignUpContainer = styled.div`
+    width: 80%;
+    height: 80%;
+`;
+
+const SignUpForm = styled.form`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    color: black;
+
+    div {
+        width: 100%;
+    }
+
+    button {
+        margin: 20px 0px 0px 0px;
+        padding: 8px;
+        background-color: #34911c;
+        color: white;
+        border-color: transparent;
+        text-transform: uppercase;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+`;
+
+const SignUpInput = styled.input`
+    height: 40px;
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+    padding-left: 5px;
+`;
 
 function SignUp() {
     const { signUp } = useContext(UserContext);
@@ -147,55 +185,46 @@ function SignUp() {
     };
 
     return (
-        <div className="sign-up-in">
-                <form
-                    ref={formRef}
-                    onSubmit={handleForm}
-                    className="sign-up-form"
-                >
-                    <div>
-                        <label htmlFor="signUpEmail"></label>
-                        <input
-                            ref={addInputs}
-                            name="email"
-                            required
-                            type="email"
-                            placeholder="Adresse e-mail"
-                            className="sign-up-in-input"
-                            id="signUpEmail"
-                        ></input>
-                    </div>
-                    <div>
-                        <label htmlFor="signUpPassword"></label>
-                        <input
-                            ref={addInputs}
-                            id="signUpPassword"
-                            name="password"
-                            required
-                            type="password"
-                            placeholder="Mot de passe"
-                            className="sign-up-in-input"
-                        ></input>
-                    </div>
-                    <div>
-                        <label htmlFor="signUpPasswordConfirmation"></label>
-                        <input
-                            ref={addInputs}
-                            id="signUpPasswordConfirmation"
-                            name="passwordConfirmation"
-                            required
-                            type="password"
-                            placeholder="Confirmer"
-                            className="sign-up-in-input"
-                        ></input>
-                        <p>{characterNumber}</p>
-                        <p>{validation}</p>
-                    </div>
-                    <button type="submit" className="sign-up-validation">
-                        Valider mon inscription
-                    </button>
-                </form>
-        </div>
+        <SignUpContainer>
+            <SignUpForm ref={formRef} onSubmit={handleForm}>
+                <div>
+                    <label htmlFor="signUpEmail"></label>
+                    <SignUpInput
+                        ref={addInputs}
+                        name="email"
+                        required
+                        type="email"
+                        placeholder="Adresse e-mail"
+                        id="signUpEmail"
+                    ></SignUpInput>
+                </div>
+                <div>
+                    <label htmlFor="signUpPassword"></label>
+                    <SignUpInput
+                        ref={addInputs}
+                        id="signUpPassword"
+                        name="password"
+                        required
+                        type="password"
+                        placeholder="Mot de passe"
+                    ></SignUpInput>
+                </div>
+                <div>
+                    <label htmlFor="signUpPasswordConfirmation"></label>
+                    <SignUpInput
+                        ref={addInputs}
+                        id="signUpPasswordConfirmation"
+                        name="passwordConfirmation"
+                        required
+                        type="password"
+                        placeholder="Confirmer"
+                    ></SignUpInput>
+                    <p>{characterNumber}</p>
+                    <p>{validation}</p>
+                </div>
+                <button type="submit">Valider mon inscription</button>
+            </SignUpForm>
+        </SignUpContainer>
     );
 }
 

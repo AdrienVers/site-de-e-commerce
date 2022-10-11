@@ -1,5 +1,5 @@
-import './cart.css';
 import useMediaQuery from './useMediaQuery';
+import styled from 'styled-components';
 
 function Cart({ cart, updateCart }) {
     const total = cart.reduce(
@@ -15,73 +15,62 @@ function Cart({ cart, updateCart }) {
     }
 
     return (
-        <div className="cart-global">
-            <div className="cart-header">
-                <div className="cart-title">
+        <CartGlobal>
+            <CartHeader>
+                <CartTitle>
                     {phoneSize ? (
                         <h2>Total : {total}€</h2>
                     ) : (
                         <h2>Total du panier : {total}€</h2>
                     )}
-                </div>
-                <div className="cart-buttons">
+                </CartTitle>
+                <CartButtons>
                     {phoneSize ? (
-                        <button
-                            className="cart-remove"
-                            onClick={() => updateCart([])}
-                        >
+                        <CartRemove onClick={() => updateCart([])}>
                             Vider
-                        </button>
+                        </CartRemove>
                     ) : (
-                        <button
-                            className="cart-remove"
-                            onClick={() => updateCart([])}
-                        >
+                        <CartRemove onClick={() => updateCart([])}>
                             Vider le panier
-                        </button>
+                        </CartRemove>
                     )}
                     {phoneSize ? (
-                        <button className="cart-paiement">Paiement</button>
+                        <CartPaiement>Paiement</CartPaiement>
                     ) : (
-                        <button className="cart-paiement">
-                            Procéder au paiement
-                        </button>
+                        <CartPaiement>Procéder au paiement</CartPaiement>
                     )}
-                </div>
-            </div>
-            <div className="cart-separation"></div>
+                </CartButtons>
+            </CartHeader>
+            <CartSeparation></CartSeparation>
             {cart.length > 0 ? (
                 <div>
-                    <ul className="cart-list">
+                    <ul>
                         {cart.map(({ name, img, price, amount }, index) => (
-                            <li
-                                key={`${name}-${img}-${index}`}
-                                className="cart-element"
-                            >
-                                <div className="cart-element-name">
+                            <li key={`${name}-${img}-${index}`}>
+                                <CartElementName>
                                     <h3>{name}</h3>
-                                </div>
-                                <div className="cart-element-img">
+                                </CartElementName>
+                                <CartElementImg>
                                     <img src={img} alt={name} />
-                                </div>
-                                <div className="cart-element-info">
-                                    <div className="cart-element-price">
+                                </CartElementImg>
+                                <CartElementInfo>
+                                    <CartElementPrice>
                                         <p>
                                             {price}€ x {amount} ={' '}
                                             {price * amount}€
                                         </p>
-                                    </div>
-                                    <div className="cart-element-add-button">
+                                    </CartElementPrice>
+                                    <CartElementAmount>
                                         <h5>Quantité : {amount}</h5>
-                                    </div>
-                                    <div className="cart-element-remove">
+                                    </CartElementAmount>
+                                    <CartElementRemove>
                                         <button
                                             onClick={() => removeElement(name)}
                                         >
                                             Retirer du panier
                                         </button>
-                                    </div>
-                                </div>
+                                    </CartElementRemove>
+                                </CartElementInfo>
                             </li>
                         ))}
                     </ul>
@@ -94,8 +83,161 @@ function Cart({ cart, updateCart }) {
                     </h4>
                 </div>
             )}
-        </div>
+        </CartGlobal>
     );
 }
+
+const CartGlobal = styled.div`
+    padding: 10px 0px 20px 0px;
+    min-width: 60vw;
+
+    h4 {
+        padding-bottom: 10px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 5px 30px 5px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 800px;
+        justify-content: center;
+    }
+
+    li {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        box-shadow: 1px 1px 12px #555;
+        margin: 15px 10px 10px 10px;
+        background-color: white;
+        height: 280px;
+        width: 190px;
+    }
+
+    @media (max-width: 800px) {
+        h2 {
+            font-size: 1.6rem;
+        }
+    }
+`;
+
+const CartHeader = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 30px 0px 30px;
+    height: 40px;
+`;
+
+const CartTitle = styled.div`
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media (max-width: 800px) {
+        justify-content: center;
+    }
+
+    @media (max-width: 400px) {
+        justify-content: start;
+    }
+`;
+
+const CartButtons = styled.div`
+    padding: 0px 5px 0px 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+`;
+
+const CartRemove = styled.button`
+    height: 80%;
+    padding: 0px 10px 0px 10px;
+    margin-right: 5px;
+
+    @media (max-width: 800px) {
+        font-size: 0.9rem;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+`;
+
+const CartPaiement = styled.button`
+    height: 100%;
+    background-color: #34911c;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0px 20px 0px 20px;
+    margin-left: 5px;
+
+    @media (max-width: 800px) {
+        font-size: 1.1rem;
+        padding: 0px 12px 0px 12px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+`;
+
+const CartSeparation = styled.div`
+    padding: 10px 0px 10px 0px;
+
+    @media (max-width: 800px) {
+        padding: 5px 0px 5px 0px;
+    }
+`;
+
+const CartElementName = styled.div`
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+const CartElementImg = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+`;
+
+const CartElementInfo = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    flex-direction: column;
+`;
+
+const CartElementPrice = styled.div`
+    padding: 0px 0px 5px 0px;
+`;
+
+const CartElementAmount = styled.div`
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    padding: 5px 0px 5px 0px;
+    margin-bottom: 5px;
+`;
+
+const CartElementRemove = styled.div`
+    height: 30%;
+    width: 100%;
+
+    button {
+        padding: 2px;
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
+`;
 
 export default Cart;

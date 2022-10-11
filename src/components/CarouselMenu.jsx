@@ -61,13 +61,4 @@ const CarouselMenu = (props) => {
     );
 };
 
-/* 
-    <div>En ce moment</div>
-    <div>Menu</div>
-    <div>Entrée</div>
-    <div>Plat</div>
-    <div>Dessert</div>
-    <div>Boisson</div>
-*/
-
 export default CarouselMenu;

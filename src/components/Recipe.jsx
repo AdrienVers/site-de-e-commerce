@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './recipe.css';
+import styled from 'styled-components';
 
 function Recipe() {
     const [details, setDetails] = useState({});
@@ -18,9 +18,9 @@ function Recipe() {
     }, []);
 
     return (
-        <div className="recipe-global">
+        <RecipeGlobal>
             <br />
-            <div className="recipe-informations">
+            <RecipeInformations>
                 <h2>
                     En attendant une réouverture rapide de notre restaurant, le
                     chef vous propose de reproduire chez vous la recette du mois
@@ -47,17 +47,38 @@ function Recipe() {
                 <br />
                 <h3>Les conseils de préparation du chef : </h3>
                 <br />
-                <h3 className="recipe-advice">
+                <RecipeAdvice>
                     <em
                         dangerouslySetInnerHTML={{
                             __html: '«' + details.instructions + '»',
                         }}
                     ></em>
-                </h3>
+                </RecipeAdvice>
                 <br />
-            </div>
-        </div>
+            </RecipeInformations>
+        </RecipeGlobal>
     );
 }
+
+const RecipeGlobal = styled.div`
+    background-color: rgb(240, 240, 240);
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+const RecipeInformations = styled.div`
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+`;
+
+const RecipeAdvice = styled.h3`
+    flex: 1;
+    width: 70%;
+`;
 
 export default Recipe;

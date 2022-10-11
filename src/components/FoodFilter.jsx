@@ -28,7 +28,6 @@ const DropdownLink = styled.div`
     filter: brightness(0%);
     font-size: 11px;
 
-
     &:hover {
         filter: brightness(100%);
         cursor: pointer;

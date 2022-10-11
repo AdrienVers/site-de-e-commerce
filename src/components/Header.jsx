@@ -6,6 +6,143 @@ import Hamburger from './Hamburger';
 import styled, { ThemeProvider, keyframes } from 'styled-components';
 import { UserContext } from '../context/userContext';
 
+function Header() {
+    const phoneSize = useMediaQuery('(min-width: 650px)');
+
+    const [theme, setTheme] = useState('openMenu');
+    const isOpen = theme === 'openMenu';
+
+    const toggleAnim = () => {
+        setTheme(isOpen ? 'closeMenu' : 'openMenu');
+        console.log('cliqué!');
+    };
+
+    const { currentUser } = useContext(UserContext);
+
+    return (
+        <ThemeProvider theme={isOpen ? closeMenu : openMenu}>
+            <HeaderNavbar>
+                <Navbar>
+                    <NavbarLogo>
+                        <NavbarLink to={'/site-de-e-commerce/'}>
+                            <Logo src={LogoAsset} className="logo" alt="Logo" />
+                        </NavbarLink>
+                    </NavbarLogo>
+
+                    <NavbarBtn>
+                        <NavbarLink to={'/reservation'}>
+                            <NavbarIcon>
+                                {phoneSize ? (
+                                    <div>RESERVATION</div>
+                                ) : (
+                                    <Icon className="fa-solid fa-calendar-day"></Icon>
+                                )}
+                            </NavbarIcon>
+                        </NavbarLink>
+                        <NavbarLink to={'/takeaway'}>
+                            <NavbarIcon>
+                                {phoneSize ? (
+                                    <div>COMMANDE</div>
+                                ) : (
+                                    <Icon className="fa-solid fa-basket-shopping"></Icon>
+                                )}
+                            </NavbarIcon>
+                        </NavbarLink>
+                        <NavbarLink to={'/account'}>
+                            {currentUser ? (
+                                <NavbarProfil>
+                                    <i className="fa-solid fa-user"></i>
+                                </NavbarProfil>
+                            ) : (
+                                <NavbarIcon>
+                                    {phoneSize ? (
+                                        <div>MON COMPTE</div>
+                                    ) : (
+                                        <Icon className="fa-solid fa-user"></Icon>
+                                    )}
+                                </NavbarIcon>
+                            )}
+                        </NavbarLink>
+                    </NavbarBtn>
+
+                    <NavbarHamburger>
+                        <div onClick={toggleAnim}>
+                            <Hamburger />
+                        </div>
+                    </NavbarHamburger>
+                    <NavbarMenu>
+                        <NavbarItem>
+                            {phoneSize ? (
+                                <NavbarLink to={'/site-de-e-commerce/'}>
+                                    Accueil
+                                </NavbarLink>
+                            ) : (
+                                <NavbarLink
+                                    onClick={toggleAnim}
+                                    to={'/site-de-e-commerce/'}
+                                >
+                                    Accueil
+                                </NavbarLink>
+                            )}
+                        </NavbarItem>
+                        <NavbarItem>
+                            {phoneSize ? (
+                                <NavbarLink to={'/dishes'}>
+                                    Nos plats
+                                </NavbarLink>
+                            ) : (
+                                <NavbarLink onClick={toggleAnim} to={'/dishes'}>
+                                    Nos plats
+                                </NavbarLink>
+                            )}
+                        </NavbarItem>
+                        <NavbarItem>
+                            {phoneSize ? (
+                                <NavbarLink to={'/engagements'}>
+                                    Nos engagements
+                                </NavbarLink>
+                            ) : (
+                                <NavbarLink
+                                    onClick={toggleAnim}
+                                    to={'/engagements'}
+                                >
+                                    Nos engagements
+                                </NavbarLink>
+                            )}
+                        </NavbarItem>
+                        <NavbarItem>
+                            {phoneSize ? (
+                                <NavbarLink to={'/opinions'}>
+                                    Vos avis
+                                </NavbarLink>
+                            ) : (
+                                <NavbarLink
+                                    onClick={toggleAnim}
+                                    to={'/opinions'}
+                                >
+                                    Vos avis
+                                </NavbarLink>
+                            )}
+                        </NavbarItem>
+                        <NavbarItem>
+                            {phoneSize ? (
+                                <NavbarLink to={'/contact'}>Contact</NavbarLink>
+                            ) : (
+                                <NavbarLink
+                                    onClick={toggleAnim}
+                                    to={'/contact'}
+                                >
+                                    Contact
+                                </NavbarLink>
+                            )}
+                        </NavbarItem>
+                    </NavbarMenu>
+                </Navbar>
+            </HeaderNavbar>
+        </ThemeProvider>
+    );
+}
+
 const fadeIn = keyframes`
   from {
     opacity: 0; 
@@ -233,142 +370,5 @@ const closeMenu = {
     spawn: 'translateY(-100%)',
     appear: 0,
 };
-
-function Header() {
-    const phoneSize = useMediaQuery('(min-width: 650px)');
-
-    const [theme, setTheme] = useState('openMenu');
-    const isOpen = theme === 'openMenu';
-
-    const toggleAnim = () => {
-        setTheme(isOpen ? 'closeMenu' : 'openMenu');
-        console.log('cliqué!');
-    };
-
-    const { currentUser } = useContext(UserContext);
-
-    return (
-        <ThemeProvider theme={isOpen ? closeMenu : openMenu}>
-            <HeaderNavbar>
-                <Navbar>
-                    <NavbarLogo>
-                        <NavbarLink to={'/site-de-e-commerce/'}>
-                            <Logo src={LogoAsset} className="logo" alt="Logo" />
-                        </NavbarLink>
-                    </NavbarLogo>
-
-                    <NavbarBtn>
-                        <NavbarLink to={'/reservation'}>
-                            <NavbarIcon>
-                                {phoneSize ? (
-                                    <div>RESERVATION</div>
-                                ) : (
-                                    <Icon className="fa-solid fa-calendar-day"></Icon>
-                                )}
-                            </NavbarIcon>
-                        </NavbarLink>
-                        <NavbarLink to={'/takeaway'}>
-                            <NavbarIcon>
-                                {phoneSize ? (
-                                    <div>COMMANDE</div>
-                                ) : (
-                                    <Icon className="fa-solid fa-basket-shopping"></Icon>
-                                )}
-                            </NavbarIcon>
-                        </NavbarLink>
-                        <NavbarLink to={'/account'}>
-                            {currentUser ? (
-                                <NavbarProfil>
-                                    <i className="fa-solid fa-user"></i>
-                                </NavbarProfil>
-                            ) : (
-                                <NavbarIcon>
-                                    {phoneSize ? (
-                                        <div>MON COMPTE</div>
-                                    ) : (
-                                        <Icon className="fa-solid fa-user"></Icon>
-                                    )}
-                                </NavbarIcon>
-                            )}
-                        </NavbarLink>
-                    </NavbarBtn>
-
-                    <NavbarHamburger>
-                        <div onClick={toggleAnim}>
-                            <Hamburger />
-                        </div>
-                    </NavbarHamburger>
-                    <NavbarMenu>
-                        <NavbarItem>
-                            {phoneSize ? (
-                                <NavbarLink to={'/site-de-e-commerce/'}>
-                                    Accueil
-                                </NavbarLink>
-                            ) : (
-                                <NavbarLink
-                                    onClick={toggleAnim}
-                                    to={'/site-de-e-commerce/'}
-                                >
-                                    Accueil
-                                </NavbarLink>
-                            )}
-                        </NavbarItem>
-                        <NavbarItem>
-                            {phoneSize ? (
-                                <NavbarLink to={'/dishes'}>
-                                    Nos plats
-                                </NavbarLink>
-                            ) : (
-                                <NavbarLink onClick={toggleAnim} to={'/dishes'}>
-                                    Nos plats
-                                </NavbarLink>
-                            )}
-                        </NavbarItem>
-                        <NavbarItem>
-                            {phoneSize ? (
-                                <NavbarLink to={'/engagements'}>
-                                    Nos engagements
-                                </NavbarLink>
-                            ) : (
-                                <NavbarLink
-                                    onClick={toggleAnim}
-                                    to={'/engagements'}
-                                >
-                                    Nos engagements
-                                </NavbarLink>
-                            )}
-                        </NavbarItem>
-                        <NavbarItem>
-                            {phoneSize ? (
-                                <NavbarLink to={'/opinions'}>
-                                    Vos avis
-                                </NavbarLink>
-                            ) : (
-                                <NavbarLink
-                                    onClick={toggleAnim}
-                                    to={'/opinions'}
-                                >
-                                    Vos avis
-                                </NavbarLink>
-                            )}
-                        </NavbarItem>
-                        <NavbarItem>
-                            {phoneSize ? (
-                                <NavbarLink to={'/contact'}>Contact</NavbarLink>
-                            ) : (
-                                <NavbarLink
-                                    onClick={toggleAnim}
-                                    to={'/contact'}
-                                >
-                                    Contact
-                                </NavbarLink>
-                            )}
-                        </NavbarItem>
-                    </NavbarMenu>
-                </Navbar>
-            </HeaderNavbar>
-        </ThemeProvider>
-    );
-}
 
 export default Header;

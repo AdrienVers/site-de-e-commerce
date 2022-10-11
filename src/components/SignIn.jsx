@@ -2,8 +2,52 @@ import React from 'react';
 import { useContext, useRef, useState } from 'react';
 import { UserContext } from '../context/userContext';
 import { useNavigate } from 'react-router-dom';
-import useMediaQuery from '../components/useMediaQuery';
-import './signUpIn.css';
+import useMediaQuery from './useMediaQuery';
+import styled from 'styled-components';
+
+const SignInContainer = styled.div`
+    width: 80%;
+    height: 80%;
+`;
+
+const SignInForm = styled.form`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    color: black;
+
+    div {
+        width : 100%;
+    }
+
+    button {
+        margin: 20px 0px 20px 0px;
+        padding: 8px;
+        background-color: #34911c;
+        color: white;
+        border-color: transparent;
+        text-transform: uppercase;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+`;
+
+const SignInInput = styled.input`
+    height: 40px;
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+    padding-left: 5px;
+`;
+
+const SignInToSignUp = styled.p`
+    &:hover {
+        cursor: pointer;
+    }
+`;
 
 function SignIn() {
     const phoneSize = useMediaQuery('(max-width: 800px)');
@@ -50,44 +94,42 @@ function SignIn() {
     };
 
     return (
-        <div className="sign-up-in">
-            <form ref={formRef} onSubmit={handleForm} className="sign-in-form">
+        <SignInContainer>
+            <SignInForm ref={formRef} onSubmit={handleForm}>
                 <div>
                     <label htmlFor="signInEmail"></label>
-                    <input
+                    <SignInInput
                         ref={addInputs}
                         name="email"
                         required
                         type="email"
                         placeholder="Adresse e-mail"
-                        className="sign-up-in-input"
                         id="signInEmail"
-                    ></input>
+                    ></SignInInput>
                 </div>
                 <div>
                     <label htmlFor="signInPassword"></label>
-                    <input
+                    <SignInInput
                         ref={addInputs}
                         id="signInPassword"
                         name="password"
                         required
                         type="password"
                         placeholder="Mot de passe"
-                        className="sign-up-in-input"
-                    ></input>
+                    ></SignInInput>
                     <p>{validation}</p>
                 </div>
 
-                <button className="sign-in-validation">Me connecter</button>
+                <button type="submit">Me connecter</button>
                 <p>Mot de passe oublié ?</p>
-                <br/>
+                <br />
                 {phoneSize ? (
-                    <p className="sign-up-link">
+                    <SignInToSignUp>
                         Je n'ai pas encore de compte.
-                    </p>
+                    </SignInToSignUp>
                 ) : null}
-            </form>
-        </div>
+            </SignInForm>
+        </SignInContainer>
     );
 }
 

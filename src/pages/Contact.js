@@ -3,7 +3,122 @@ import { data } from '../firebase-config';
 import { storage } from '../firebase-config';
 import { collection, addDoc } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
-import './contact.css';
+import styled from 'styled-components';
+
+const ContactGlobal = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    background-color: rgb(240, 240, 240);
+
+    h1 {
+        margin: 30px 0px 30px 0px;
+    }
+
+    @media (max-width: 1050px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(240, 240, 240);
+        flex-direction: column;
+    }
+`;
+
+const ContactInput = styled.div`
+    background-color: antiquewhite;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 70px;
+
+    @media (max-width: 1050px) {
+        width: 100%;
+    }
+`;
+
+const ContactInformation = styled.div`
+    height: 100%;
+    background-color: rgb(240, 240, 240);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 70px;
+
+    ul {
+        text-align: left;
+        list-style: none;
+        padding-left: 25px;
+    }
+
+    li {
+        line-height: 22px;
+    }
+
+    @media (max-width: 1050px) {
+        width: 100%;
+    }
+`;
+
+const ContactTitle = styled.div`
+    min-height: 100px;
+`;
+
+const ContactForm = styled.div`
+    background-color: rgb(240, 240, 240);
+    height: 90%;
+    padding: 50px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    box-shadow: 1px 1px 12px #555;
+
+    div {
+        width: 100%;
+    }
+
+    input:nth-child(1),
+    input:nth-child(3),
+    input:nth-child(5) {
+        height: 40px;
+        padding-left: 5px;
+        width: 90%;
+    }
+
+    input:nth-child(7) {
+        height: 80px;
+        padding: 0px 0px 40px 5px;
+        width: 90%;
+    }
+`;
+
+const ContactGrid = styled.div`
+    background-color: white;
+    font-size: 1.2rem;
+    padding: 50px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    box-shadow: 1px 1px 12px #555;
+`;
+
+const ContactSubmitButton = styled.button`
+    padding: 5px 10px 5px 10px;
+    font-size: 1.2rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+`;
 
 function Contact() {
     const [name, setName] = useState('');
@@ -69,14 +184,13 @@ function Contact() {
     };
 
     return (
-        <div className="contact-global">
-            <div className="contact-input">
-                <div className="contact-title">
+        <ContactGlobal>
+            <ContactInput>
+                <ContactTitle>
                     <h1>Formulaire de contact</h1>
-                </div>
-                <div className="contact-form">
+                </ContactTitle>
+                <ContactForm>
                     <input
-                        className="contact-name"
                         placeholder="Votre nom"
                         name="name"
                         value={name}
@@ -86,7 +200,6 @@ function Contact() {
                     ></input>
                     <br />
                     <input
-                        className="contact-email"
                         type="email"
                         placeholder="Votre adresse mail"
                         name="email"
@@ -97,7 +210,6 @@ function Contact() {
                     ></input>
                     <br />
                     <input
-                        className="contact-phone"
                         type="text"
                         placeholder="Votre numéro de téléphone"
                         name="phone"
@@ -108,7 +220,6 @@ function Contact() {
                     ></input>
                     <br />
                     <input
-                        className="contact-message"
                         type="text"
                         placeholder="Votre message..."
                         name="comment"
@@ -129,6 +240,7 @@ function Contact() {
                     </button>
                     {image ? (
                         <p>
+                            <br />
                             <img
                                 src={preview}
                                 style={{ objectFit: 'cover', height: '80px' }}
@@ -147,20 +259,20 @@ function Contact() {
                             setImage(e.target.files[0]);
                         }}
                     ></input>
-                    <button onClick={upload} className="contact-submit-button">
+                    <ContactSubmitButton onClick={upload}>
                         Envoyer
-                    </button>
+                    </ContactSubmitButton>
                     <br />
                     {progress === 100 ? (
                         <p>Votre message a bien été envoyé !</p>
                     ) : null}
-                </div>
-            </div>
-            <div className="contact-information">
-                <div className="contact-title">
+                </ContactForm>
+            </ContactInput>
+            <ContactInformation>
+                <ContactTitle>
                     <h1>Informations pratiques</h1>
-                </div>
-                <div className="contact-grid">
+                </ContactTitle>
+                <ContactGrid>
                     <p>
                         <strong>Adresse du Normand Voyagageur :</strong>
                     </p>
@@ -190,9 +302,9 @@ function Contact() {
                         <li>Samedi : 12:00–22:00,</li>
                         <li>Dimanche : 12:00–20:45.</li>
                     </ul>
-                </div>
-            </div>
-        </div>
+                </ContactGrid>
+            </ContactInformation>
+        </ContactGlobal>
     );
 }
 

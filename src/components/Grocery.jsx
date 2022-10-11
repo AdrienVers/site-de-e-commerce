@@ -1,23 +1,6 @@
 import React, { useState } from 'react';
-import './grocery.css';
 import { foodData } from '../datas/foodData';
 import styled from 'styled-components';
-
-const IconPlus = styled.i`
-    color: #34911c;
-    padding: 0px 10px 0px 10px;
-    &:hover {
-        cursor: pointer;
-    }
-`;
-
-const IconMinus = styled.i`
-    color: red;
-    padding: 0px 10px 0px 10px;
-    &:hover {
-        cursor: pointer;
-    }
-`;
 
 function Grocery({ cart, updateCart }) {
     // const [activeCategory, setActiveCategory] = useState('');
@@ -94,20 +77,16 @@ function Grocery({ cart, updateCart }) {
     }
 
     return (
-        <div className="dishesInfoContainer">
+        <DishesInfoContainer>
             {foodData.map((food) => (
-                <div className="dishesInfo" key={food.id}>
-                    <div className="dishesLeftInfo">
-                        <img
-                            className="dishesImageInfo"
-                            src={food.img}
-                            alt={`${food.categoryname}`}
-                        />
-                    </div>
-                    <div className="dishesMiddleInfo">
-                        <div className="dishesNameInfo">{food.name}</div>
-                        <div className="dishesAddInfo">
-                            <div className="dishesAddNumber">
+                <DishesInfo key={food.id}>
+                    <DishesLeftInfo>
+                        <img src={food.img} alt={`${food.name}`} />
+                    </DishesLeftInfo>
+                    <DishesMiddleInfo>
+                        <DishesNameInfo>{food.name}</DishesNameInfo>
+                        <DishesAddInfo>
+                            <DishesAddNumber>
                                 <IconMinus
                                     className="fa-solid fa-circle-minus"
                                     onClick={() =>
@@ -121,8 +100,8 @@ function Grocery({ cart, updateCart }) {
                                         increaseItemQuantity(food.name)
                                     }
                                 />
-                            </div>
-                            <div className="dishesAddToBasket">
+                            </DishesAddNumber>
+                            <DishesAddToBasket>
                                 {/* 
                                 {getItemQuantity(food.name) === 0 ? (
                                     <button>Choisir une quantité</button>
@@ -151,19 +130,118 @@ function Grocery({ cart, updateCart }) {
                                 >
                                     Ajouter au panier
                                 </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="dishesRightInfo">
-                        <div className="dishesDetailInfo">Détails</div>
-                        <div className="dishesPriceInfo">
+                            </DishesAddToBasket>
+                        </DishesAddInfo>
+                    </DishesMiddleInfo>
+                    <DishesRightInfo>
+                        <DishesDetailInfo>Détails</DishesDetailInfo>
+                        <DishesPriceInfo>
                             {food.price.toFixed(2)}€
-                        </div>
-                    </div>
-                </div>
+                        </DishesPriceInfo>
+                    </DishesRightInfo>
+                </DishesInfo>
             ))}
-        </div>
+        </DishesInfoContainer>
     );
 }
+
+const IconPlus = styled.i`
+    color: #34911c;
+    padding: 0px 10px 0px 10px;
+    &:hover {
+        cursor: pointer;
+    }
+`;
+
+const IconMinus = styled.i`
+    color: red;
+    padding: 0px 10px 0px 10px;
+    &:hover {
+        cursor: pointer;
+    }
+`;
+
+const DishesInfoContainer = styled.div`
+    background-color: white;
+    padding-bottom: 5px;
+`;
+
+const DishesInfo = styled.div`
+    box-shadow: inset 0px 0px 0px 0.2px black;
+    height: 100px;
+    display: flex;
+    width: 97vmin;
+`;
+
+const DishesLeftInfo = styled.div`
+    box-shadow: inset 0px 0px 0px 0.2px black;
+    flex-basis: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        height: 70px;
+        width: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+`;
+
+const DishesMiddleInfo = styled.div`
+    box-shadow: inset 0px 0px 0px 0.2px black;
+    flex-basis: 45%;
+    display: flex;
+    flex-direction: column;
+`;
+
+const DishesNameInfo = styled.div`
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+const DishesDetailInfo = styled.div`
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+const DishesPriceInfo = styled.div`
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+const DishesAddInfo = styled.div`
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+`;
+
+const DishesAddNumber = styled.div`
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
+const DishesAddToBasket = styled.div`
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
+const DishesRightInfo = styled.div`
+    box-shadow: inset 0px 0px 0px 0.2px black;
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+`;
 
 export default Grocery;

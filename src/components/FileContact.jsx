@@ -39,15 +39,12 @@ function FileContact(props) {
                 accept=".jpg, .png, .jpeg"
                 onChange={pickedHandler}
             ></input>
-            <div className="file-uppload-preview">
+            <div>
                 <img src={previewURL} alt="preview" />
                 {previewURL && <img src={previewURL} alt="preview" />}
                 {!previewURL && (
-                    <div className="center">
-                        <button
-                            className="file-upload-button"
-                            onClick={pickedFileHandler}
-                        >
+                    <div>
+                        <button onClick={pickedFileHandler}>
                             Joindre le fichier
                         </button>
                     </div>
@@ -55,11 +52,8 @@ function FileContact(props) {
             </div>
             <div>
                 {previewURL && (
-                    <div className="center">
-                        <button
-                            className="file-upload-button"
-                            onClick={pickedFileHandler}
-                        >
+                    <div>
+                        <button onClick={pickedFileHandler}>
                             Joindre le fichier
                         </button>
                     </div>

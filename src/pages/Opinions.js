@@ -1,9 +1,26 @@
 import React from 'react';
-import './opinions.css';
 import OpinionsOthers from '../components/OpinionsOthers';
 import OpinionsMine from '../components/OpinionsMine';
 import { opinionsData } from '../datas/opinionsData';
 import OpinionsAdded from '../components/OpinionsAdded';
+import styled from 'styled-components';
+
+const OpinionList = styled.div`
+    height: 45%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 600px);
+    grid-gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+
+    @media (max-width: 600px) {
+        grid-template-columns: repeat(auto-fit, 100%);
+        grid-gap: 5px;
+        padding: 5px;
+    }
+`;
 
 function Opinions() {
     return (
@@ -11,7 +28,7 @@ function Opinions() {
             <OpinionsMine />
             <OpinionsAdded />
 
-            <div className="opinion-list">
+            <OpinionList>
                 {opinionsData.map((item, index) => {
                     return (
                         <OpinionsOthers
@@ -24,7 +41,7 @@ function Opinions() {
                         />
                     );
                 })}
-            </div>
+            </OpinionList>
         </div>
     );
 

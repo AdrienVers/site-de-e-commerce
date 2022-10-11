@@ -150,26 +150,22 @@ ul.dots span + span {
 }
 
 .front-container {
-    /* box-shadow: inset 0px 0px 0px 2px blue; */
     height: 93%;
 }
 
 .front-button-next {
-    /* box-shadow: inset 0px 0px 0px 2px pink; */
     height: 7%;
     display: flex;
     justify-content: flex-end;
 }
 
 .front-button-back {
-    /* box-shadow: inset 0px 0px 0px 2px pink; */
     height: 7%;
     display: flex;
     justify-content: flex-start;
 }
 
 .next-btn1 {
-    /* position: relative; */
     cursor: pointer;
     color: black;
     background-color: white;
@@ -232,13 +228,11 @@ ul.dots span + span {
 }
 
 .resp-front-container {
-    /* box-shadow: inset 0px 0px 0px 2px blue; */
     height: 96%;
 }
 
 .resp-front-button-cover,
 .resp-front-button {
-    /* box-shadow: inset 0px 0px 0px 2px pink; */
     height: 4%;
     display: flex;
     justify-content: flex-end;
@@ -337,7 +331,6 @@ ul.dots span + span {
 }
 
 .resp-next-btn1 {
-    /* box-shadow: inset 0px 0px 0px 2px red; */
     cursor: pointer;
     color: #000;
     background-color: white;
@@ -345,7 +338,6 @@ ul.dots span + span {
 }
 
 .resp-back-btn1 {
-    /* box-shadow: inset 0px 0px 0px 2px dodgerblue; */
     cursor: pointer;
     color: #000;
     background-color: white;
